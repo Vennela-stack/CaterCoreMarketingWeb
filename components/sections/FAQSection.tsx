@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
-import { Badge } from "@/components/ui/Badge";
+import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { cn } from "@/lib/cn";
 import { easeOutExpo, fadeUp, containerStagger, viewportOnce } from "@/lib/motion";
 
@@ -47,26 +47,25 @@ export function FAQSection() {
 
   return (
     <Section id="faq" padding="default">
-      <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOnce}
-          variants={containerStagger}
-          className="md:col-span-4"
-        >
-          <motion.div variants={fadeUp}>
-            <Badge tone="ember">FAQ</Badge>
-          </motion.div>
-          <motion.h2
-            variants={fadeUp}
-            className="text-display mt-5 text-[32px] leading-[1.08] md:text-[40px]"
-          >
-            Questions, answered.
-          </motion.h2>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={containerStagger}
+        className="mx-auto max-w-2xl text-center"
+      >
+        <motion.div variants={fadeUp}>
+          <SectionEyebrow>FAQ</SectionEyebrow>
         </motion.div>
+        <motion.h2
+          variants={fadeUp}
+          className="text-display mt-5 text-[32px] leading-[1.08] md:text-[40px]"
+        >
+          Questions, answered.
+        </motion.h2>
+      </motion.div>
 
-        <div className="md:col-span-8">
+      <div className="mx-auto mt-12 max-w-3xl md:mt-16">
           <ul className="divide-y divide-[rgba(11,13,16,0.09)] border-y border-[rgba(11,13,16,0.09)]">
             {FAQS.map((item, idx) => {
               const isOpen = open === idx;
@@ -122,7 +121,6 @@ export function FAQSection() {
             })}
           </ul>
         </div>
-      </div>
     </Section>
   );
 }

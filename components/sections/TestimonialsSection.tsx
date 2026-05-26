@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
-import { Badge } from "@/components/ui/Badge";
+import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { cn } from "@/lib/cn";
 import {
   containerStagger,
@@ -67,10 +67,10 @@ export function TestimonialsSection() {
         whileInView="visible"
         viewport={viewportOnce}
         variants={containerStagger}
-        className="max-w-2xl"
+        className="mx-auto max-w-2xl text-center"
       >
         <motion.div variants={fadeUp}>
-          <Badge tone="ember">Testimonials</Badge>
+          <SectionEyebrow>Testimonials</SectionEyebrow>
         </motion.div>
         <motion.h2
           variants={fadeUp}
@@ -80,7 +80,7 @@ export function TestimonialsSection() {
         </motion.h2>
         <motion.p
           variants={fadeUp}
-          className="mt-4 max-w-xl text-[15.5px] leading-relaxed text-ink-300"
+          className="mx-auto mt-4 max-w-xl text-[15.5px] leading-relaxed text-ink-300"
         >
           From boutique studios to multi-venue operations, our customers trust
           CaterCore to keep their events — and margins — on track.

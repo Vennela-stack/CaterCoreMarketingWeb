@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
 import { LinkButton } from "@/components/ui/Button";
+import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { fadeUp, viewportOnce, containerStagger } from "@/lib/motion";
 
 export function CTASection() {
@@ -26,10 +27,9 @@ export function CTASection() {
           }}
         />
 
-        <div className="relative max-w-2xl">
-          <motion.div variants={fadeUp} className="text-eyebrow">
-            <span className="h-1.5 w-1.5 rounded-full bg-ember-400" />
-            Get started
+        <div className="relative mx-auto max-w-2xl text-center">
+          <motion.div variants={fadeUp}>
+            <SectionEyebrow>Get started</SectionEyebrow>
           </motion.div>
           <motion.h2
             variants={fadeUp}
@@ -39,7 +39,7 @@ export function CTASection() {
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="mt-4 max-w-xl text-[15.5px] leading-relaxed text-ink-300"
+            className="mx-auto mt-4 max-w-xl text-[15.5px] leading-relaxed text-ink-300"
           >
             Start your free trial in minutes, or book a guided demo with our
             team — we’ll show you the platform live with your menu and pricing.
@@ -47,7 +47,7 @@ export function CTASection() {
 
           <motion.div
             variants={fadeUp}
-            className="mt-8 flex flex-col items-start gap-3 sm:flex-row"
+            className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
           >
             <LinkButton href="#" variant="primary" size="lg" className="min-w-[170px]">
               Start free trial

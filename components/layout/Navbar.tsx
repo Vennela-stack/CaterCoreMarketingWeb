@@ -5,7 +5,7 @@ import { cn } from "@/lib/cn";
 import { Logo } from "@/components/ui/Logo";
 
 const NAV_LINKS = [
-  { label: "Product", href: "#features" },
+  { label: "Features", href: "#features" },
   { label: "How it works", href: "#how-it-works" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
