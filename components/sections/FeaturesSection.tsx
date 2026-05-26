@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
-import { Badge } from "@/components/ui/Badge";
+import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { cn } from "@/lib/cn";
 import {
   containerStagger,
@@ -19,10 +19,10 @@ export function FeaturesSection() {
         whileInView="visible"
         viewport={viewportOnce}
         variants={containerStagger}
-        className="max-w-2xl"
+        className="mx-auto max-w-2xl text-center"
       >
         <motion.div variants={fadeUp}>
-          <Badge tone="ember">Platform</Badge>
+          <SectionEyebrow>Features</SectionEyebrow>
         </motion.div>
         <motion.h2
           variants={fadeUp}
@@ -34,7 +34,7 @@ export function FeaturesSection() {
         </motion.h2>
         <motion.p
           variants={fadeUp}
-          className="mt-4 max-w-xl text-[15.5px] leading-relaxed text-ink-300"
+          className="mx-auto mt-4 max-w-xl text-[15.5px] leading-relaxed text-ink-300"
         >
           Replace seven tools with one workspace built for the realities of
           catering — from peak season chaos to multi-venue logistics.
